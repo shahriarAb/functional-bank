@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Banking Site</title>
+</head>
+<body>
+    <header>
+        <h1 class="text-5xl text-center mt-12">$Let's get some <span class="font-semibold text-red-500	">Moooooney!!!$</span></h1>
+    </header>
+    <main class="w-3/4 mx-auto">
+        <section class="mt-8">
+            <div class="grid grid-cols-3 gap-4 text-white">
+                <div class="bg-green-400 p-6 rounded-md border-2 border-green-500">
+                    <h4 class="text-2xl font-semibold">Deposit</h4>
+                    <h3 class="text-5xl font-bold">$<span id="deposit-total">00</span></h3>
+                </div>
+                <div class="bg-blue-400 p-6 rounded-md border-2 border-blue-500">
+                    <h4 class="text-2xl font-semibold">Withdraw</h4>
+                    <h3 class="text-5xl font-bold">$<span id="withdraw-total">00</span></h3>
+                </div>
+                <div class="bg-indigo-400 p-6 rounded-md border-2 border-indigo-500">
+                    <h4 class="text-2xl font-semibold">Balance</h4>
+                    <h3 class="text-5xl font-bold">$<span id="balance-total">700</span></h3>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="mt-6 bg-green-200 p-6 rounded-md border-2 border-green-300">
+                    <h3 class="text-3xl font-semibold">Please Deposit</h3>
+                    <div>
+                        <h4 class="font-semibold text-lg text-gray-700">Ammount: </h4>
+                        <input id="deposit-field" class="bg-gray-100 focus:bg-white border-2 border-gray-300 rounded w-2/3 px-2" type="text" placeholder="Deposite Ammount $">
+                    </div>
+                    <button id="deposit-btn" class="mt-2 bg-gradient-to-r from-green-400 to-green-500 rounded-md px-6 py-2 text-white font-semibold">Deposit</button>
+                </div>
+                <div class="mt-6 bg-blue-200 p-6 rounded-md border-2 border-blue-300">
+                    <h3 class="text-3xl font-semibold">Please Withdraw</h3>
+                    <div>
+                        <h4 class="font-semibold text-lg text-gray-700">Ammount: </h4>
+                        <input id="withdraw-field" class="bg-gray-100 focus:bg-white border-2 border-gray-300 rounded w-2/3 px-2" type="text" placeholder="Withdraw Ammount $">
+                    </div>
+                    <button id="withdraw-btn" class="mt-2 bg-gradient-to-r from-blue-400 to-blue-500 rounded-md px-6 py-2 text-white font-semibold">Withdraw</button>
+                </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/banking.js"></script>
+</body>
+</html>
