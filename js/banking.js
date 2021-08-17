@@ -11,7 +11,7 @@ function getFieldValueAdd(fieldValue, amount) {
     const previousAmount = parseFloat(totalFieldValueText);
     totalFiledValue.innerText = previousAmount + amount;
 }
-function getCurrentBalance(){
+function getCurrentBalance() {
     const balanceTotal = document.getElementById('balance-total');
     const previousBalanceTotalText = balanceTotal.innerText;
     const previousBlanceTotal = parseFloat(previousBalanceTotalText);
@@ -43,8 +43,9 @@ document.getElementById('withdraw-btn').addEventListener('click', function () {
     if (newWithdrawAmount > 0 && newWithdrawAmount <= currentBalance) {
         getFieldValueAdd('withdraw-total', newWithdrawAmount); //update withdraw
         updateBalance(newWithdrawAmount, false); //update balance
+        document.getElementById('warning-message').innerText = '';
     }
-    if(newWithdrawAmount > currentBalance){
+    if (newWithdrawAmount > currentBalance) {
         document.getElementById('warning-message').innerText = 'Sorry! You can not withdraw more than you have.';
     }
 });
